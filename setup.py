@@ -5,7 +5,7 @@ with open("README.md", "r", encoding = "utf-8") as fh:
 
 setuptools.setup(
     name = "mongo",
-    version = "1.0.0",
+    version = "0.0.1",
     author = "Sagar Motghare",
     author_email = "sagarmotghare@proton.me",
     description = "Simple Package to manage operations with MongoDB Database",
