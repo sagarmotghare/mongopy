@@ -1,26 +1,27 @@
 import setuptools
 
-with open("README.md", "r", encoding = "utf-8") as fh:
-    long_description = fh.read()
+# with open("README.md", "r", encoding="utf-8") as fh:
+#     long_description = fh.read()
 
 setuptools.setup(
-    name = "mongo",
-    version = "0.0.1",
-    author = "Sagar Motghare",
-    author_email = "sagarmotghare@proton.me",
-    description = "Simple Package to manage operations with MongoDB Database",
-    long_description = long_description,
-    long_description_content_type = "text/markdown",
-    url = "https://github.com/sagarmotghare/mongo",
-    project_urls = {
+    name="mongo",
+    version="0.0.1",
+    author="Sagar Motghare",
+    author_email="sagarmotghare@proton.me",
+    description="Simple Package to manage operations with MongoDB Database",
+    # long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/sagarmotghare/mongo",
+    project_urls={
         "Bug Tracker": "https://github.com/sagarmotghare/mongo/issues",
     },
-    classifiers = [
+    classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir = {"": "src"},
-    packages = setuptools.find_packages(where="src"),
-    python_requires = ">=3.6"
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.6",
+    install_requires=["pymongo", "pandas", "certifi"]
 )

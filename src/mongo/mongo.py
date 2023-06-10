@@ -12,7 +12,10 @@ class Mongo:
         self.database = database
 
     def get_database(self):
-        return self.mongo_client.get_database(self.database) if self.database else self.mongo_client.get_database()
+        try:
+            return self.mongo_client.get_database(self.database)
+        except:
+            return self.mongo_client.get_database()
 
     def get_collection_name(self, collection_name):
         return self.get_database()[collection_name]
