@@ -19,8 +19,8 @@ dependencies = ["pymongo", "pandas", "certifi"]
 requires-python = ">=3.7"
 
 [project.optional-dependencies]
-build = ["build", "twine"]  
-dev = []
+build = ["build", "pymongo", "certifi", "pandas"]  
+dev = ["pymongo", "certifi", "pandas"]
 
 # [project.scripts]
 # realpython = "reader.__main__:main"
