@@ -14,3 +14,7 @@ Having problems or got a question?
 ## 0.0.1 (released June 10, 2023)
 
 - First version including all functions
+
+## 0.0.2 (released June 10, 2023)
+
+- Installation Issue Resolves
