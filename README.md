@@ -1,7 +1,8 @@
 # Mongo
 
-A simple package to do operation on MongoDB database
+A simple package to do operation on MongoDB database. Use below command to install a package. 
 
+``` pip install git+https://github.com/sagarmotghare/mongo.git ```
 # Support
 
 Having problems or got a question?
