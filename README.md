@@ -9,7 +9,7 @@ A simple package to do operation on MongoDB database. Use below command to insta
 ``` py
 import mongopy as mp
 
-db = mp.mongo(MONGODB_URL)
+db = mp.Mongo(MONGODB_URL)
 db.get_collection_dataframe("users")
 ```
 
