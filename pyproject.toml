@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mongo"
+name = "mongopy"
 version = "0.0.2"
 description = "Simple Package to manage operations with MongoDB Database"
 readme = "README.md"
@@ -14,7 +14,7 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["mongo", "pymongo"]
+keywords = ["mongopy", "pymongo", "mongo]
 dependencies = ["pymongo", "pandas", "certifi"]
 requires-python = ">=3.7"
 
@@ -26,7 +26,7 @@ dev = ["pymongo", "certifi", "pandas"]
 # realpython = "reader.__main__:main"
 
 [project.urls]
-repository = "https://github.com/sagarmotghare/mongo"
+repository = "https://github.com/sagarmotghare/mongopy"
 # documentation = "https://realpython.com/pypi-publish-python-package/"
 
 
@@ -40,7 +40,7 @@ push = false
 
 [tool.bumpver.file_patterns]
 "pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
-"src/mongo/__init__.py" = ["{version}"]
+"src/mongopy/__init__.py" = ["{version}"]
 
 [tool.isort]
 # profile = "black"
