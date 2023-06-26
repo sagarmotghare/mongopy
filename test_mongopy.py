@@ -1,3 +1,4 @@
+'''Tesing'''
 import os
 
 import pandas as pd
@@ -38,7 +39,7 @@ def test_insert_dataframe():
     """Testing: Insert Dataframe"""
     db.insert_dataframe(
         "test_dataframe",
-        df=pd.DataFrame([{"key": "value1"}, {"key": "value2"}]),
+        data_frame=pd.DataFrame([{"key": "value1"}, {"key": "value2"}]),
     )
 
 

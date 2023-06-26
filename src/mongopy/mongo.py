@@ -6,6 +6,7 @@ from pymongo import MongoClient
 
 class Mongo:
     '''Create Mongo Object'''
+    database = None
 
     def __init__(self, url):
         '''Initalise Object'''
@@ -17,10 +18,9 @@ class Mongo:
 
     def get_database(self):
         '''Get Database'''
-        if(self.database):
+        if self.database:
             return self.mongo_client.get_database(self.database)
-        else:
-            return self.mongo_client.get_database()
+        return self.mongo_client.get_database()
 
     def get_collection_name(self, collection_name):
         '''Get Collection name'''
@@ -61,14 +61,13 @@ class Mongo:
         '''Insert Many records'''
         return self.get_collection_name(collection_name).insert_many(records)
 
-    def insert_dataframe(self, collection_name, df, drop=False):
+    def insert_dataframe(self, collection_name, data_frame, drop=False):
         '''Insert DataFrame'''
-        if len(df) > 0:
+        if len(data_frame) > 0:
             if drop:
                 self.get_collection_name(collection_name).delete_many({})
-            return self.insert_many(collection_name, df.to_dict("records"))
-        else:
-            print("Empty DataFrame")
+            return self.insert_many(collection_name, data_frame.to_dict("records"))
+        return []
 
     def find_one(self, collection_name, find_condition={}):
         '''Find One Record'''
@@ -80,8 +79,7 @@ class Mongo:
 
         if len(data) > 0:
             return data[0]
-        else:
-            return None
+        return None
 
     def find(self, collection_name, find_condition={}, selector=None):
         '''Find Records'''
@@ -89,9 +87,9 @@ class Mongo:
             find_condition, selector
         )
 
-    def find_by_id(self, collection_name, id):
+    def find_by_id(self, collection_name, _id):
         '''Find By ID'''
-        return self.get_collection_name(collection_name).find({"_id": id})
+        return self.get_collection_name(collection_name).find({"_id": _id})
 
     def insert_one(self, collection_name, record):
         '''Insert One Record'''
