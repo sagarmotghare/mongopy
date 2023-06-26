@@ -2,7 +2,7 @@
 # MongoPy
 ![Interrogate](/interrogate_badge.svg)
 [![CodeQL](https://github.com/sagarmotghare/mongopy/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sagarmotghare/mongopy/actions/workflows/github-code-scanning/codeql)
-[![Pylint]()](https://github.com/sagarmotghare/mongopy/actions/workflows/pylint.yml)
+![pylint]()
 
 A simple package to do operation on MongoDB database. Use below command to install a package.
 
