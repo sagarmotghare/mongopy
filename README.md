@@ -1,6 +1,6 @@
 
 # MongoPy
-![Interrogate](/interrogate_badge.svg)
+![Interrogate](/interrogate_badge.svg) [![CodeQL](https://github.com/sagarmotghare/mongopy/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sagarmotghare/mongopy/actions/workflows/github-code-scanning/codeql)
 
 A simple package to do operation on MongoDB database. Use below command to install a package.
 ``` pip install git+https://github.com/sagarmotghare/mongopy.git ```
