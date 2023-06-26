@@ -1,8 +1,12 @@
 
 # MongoPy
-![Interrogate](/interrogate_badge.svg) [![CodeQL](https://github.com/sagarmotghare/mongopy/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sagarmotghare/mongopy/actions/workflows/github-code-scanning/codeql)
+![Interrogate](/interrogate_badge.svg)
+[![CodeQL](https://github.com/sagarmotghare/mongopy/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sagarmotghare/mongopy/actions/workflows/github-code-scanning/codeql)
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
+
 
 A simple package to do operation on MongoDB database. Use below command to install a package.
+
 ``` pip install git+https://github.com/sagarmotghare/mongopy.git ```
 # How to Use:
 ``` py
