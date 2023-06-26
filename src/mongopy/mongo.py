@@ -1,7 +1,7 @@
+import certifi
+import pandas as pd
 import pymongo
 from pymongo import MongoClient
-import pandas as pd
-import certifi
 
 
 class Mongo:

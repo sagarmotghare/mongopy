@@ -7,10 +7,17 @@ repos:
     rev: 3.8.4
     hooks:
       - id: flake8
-  # - repo: https://github.com/timothycrosley/isort
-  #   rev: 5.7.0
+  # - repo: https://github.com/pycqa/isort
+  #   rev: 5.11.2
   #   hooks:
   #     - id: isort
+  #       name: isort (python)
+  #     - id: isort
+  #       name: isort (cython)
+  #       types: [cython]
+  #     - id: isort
+  #       name: isort (pyi)
+  #       types: [pyi]
   - repo: https://github.com/econchick/interrogate
     rev: 1.4.0
     hooks:

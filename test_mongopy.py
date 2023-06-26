@@ -1,8 +1,10 @@
-import src.mongopy as mp
 import os
-from dotenv import load_dotenv
+
 import pandas as pd
 import pytest
+from dotenv import load_dotenv
+
+import src.mongopy as mp
 
 load_dotenv()
 
