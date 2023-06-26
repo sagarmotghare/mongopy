@@ -8,7 +8,9 @@ on:
     branches: [ "main", "python-package" ]
   pull_request:
     branches: [ "main" ]
-
+env:
+  MONGODB_URL: mongodb+srv://sagar:Sagar123@illumine.zdezbkf.mongodb.net/my-bank
+  
 jobs:
   build:
 
@@ -36,6 +38,5 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
-      run: |
-        MONGODB_URL = "mongodb+srv://sagar:Sagar123@illumine.zdezbkf.mongodb.net/my-bank"
+      run: |        
         pytest
