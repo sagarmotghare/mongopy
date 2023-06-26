@@ -1,3 +1,4 @@
+'''Mongo'''
 import certifi
 import pandas as pd
 import pymongo
@@ -29,26 +30,36 @@ class Mongo:
     def get_collection(
         self,
         collection_name,
-        find_condition={},
-        sort_condition=[("_id", pymongo.ASCENDING)],
+        find_condition=None,
+        sort_condition=None,
         limit_condition=0,
     ):
         '''Get Collection in List'''
+        if find_condition is None:
+            find_condition = {}
+        if sort_condition is None:
+            sort_condition = [("_id", pymongo.ASCENDING)]
         return list(
             self.find(collection_name, find_condition)
             .sort(sort_condition)
             .limit(limit_condition)
         )
 
+    # pylint: disable=too-many-arguments
     def get_collection_dataframe(
         self,
         collection_name,
-        find_condition={},
-        sort_condition=[("_id", pymongo.ASCENDING)],
+        find_condition=None,
+        sort_condition=None,
         limit_condition=0,
         selector=None,
     ):
         '''Get Collection Dataframe'''
+        if find_condition is None:
+            find_condition = {}
+        if sort_condition is None:
+            sort_condition = [("_id", pymongo.ASCENDING)]
+
         return pd.DataFrame(
             list(
                 self.find(collection_name, find_condition, selector)
@@ -69,8 +80,11 @@ class Mongo:
             return self.insert_many(collection_name, data_frame.to_dict("records"))
         return []
 
-    def find_one(self, collection_name, find_condition={}):
+    def find_one(self, collection_name, find_condition=None):
         '''Find One Record'''
+        if find_condition is None:
+            find_condition = {}
+
         data = list(
             self.get_collection_name(collection_name)
             .find(find_condition)
@@ -81,8 +95,11 @@ class Mongo:
             return data[0]
         return None
 
-    def find(self, collection_name, find_condition={}, selector=None):
+    def find(self, collection_name, find_condition=None, selector=None):
         '''Find Records'''
+        if find_condition is None:
+            find_condition = {}
+
         return self.get_collection_name(collection_name).find(
             find_condition, selector
         )
