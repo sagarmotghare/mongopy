@@ -12,12 +12,12 @@ db = mp.Mongo(MONGODB_URL)
 
 
 def test_database_connection():
-    '''Get Database Connection'''
+    """Testing: Get Database Connection"""
     db.get_database()
 
 
 def test_get_collection_dataframe():
-    '''Get Collection Dataframe'''
+    """Testing: Get Collection Dataframe"""
     users = db.get_collection_dataframe("users")
     assert users.iloc[0]["email"] == "sagarmotghare@proton.me"
 
@@ -25,6 +25,7 @@ def test_get_collection_dataframe():
 
 
 def test_get_collection():
+    """Testing: Get Collection"""
     users = db.get_collection("users")
     assert users[0]["email"] == "sagarmotghare@proton.me"
 
@@ -32,12 +33,18 @@ def test_get_collection():
 
 
 def test_insert_dataframe():
-    db.insert_dataframe("test_dataframe", df=pd.DataFrame(
-        [{"key": "value1"}, {"key": "value2"}]))
+    """Testing: Insert Dataframe"""
+    db.insert_dataframe(
+        "test_dataframe",
+        df=pd.DataFrame([{"key": "value1"}, {"key": "value2"}]),
+    )
 
 
 def test_find_one():
-    if (db.find_one(collection_name="test_dataframe", find_condition={"key": "value1"})):
+    """Testing: Find One"""
+    if db.find_one(
+        collection_name="test_dataframe", find_condition={"key": "value1"}
+    ):
         pass
     else:
         pytest.fail("No record Found")
