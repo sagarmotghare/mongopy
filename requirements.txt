@@ -10,7 +10,7 @@ dnspython==2.4.2
     # via pymongo
 numpy==1.25.2
     # via pandas
-pandas==2.0.3
+pandas==2.1.0
     # via mongopy (pyproject.toml)
 pymongo==4.5.0
     # via mongopy (pyproject.toml)
