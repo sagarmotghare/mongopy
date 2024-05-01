@@ -13,5 +13,5 @@ jobs:
       with:
         package-path: ./src/mongopy        
         python-version: ${{ matrix.python-version }}
-        requirements-path: dev-requirements.txt
+        requirements-path: requirements.txt
         readme-path: README.md
