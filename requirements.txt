@@ -8,7 +8,7 @@ certifi==2024.2.2
     # via mongopy (pyproject.toml)
 dnspython==2.6.1
     # via pymongo
-numpy==1.26.4
+numpy==1.24.4
     # via pandas
 pandas==2.2.1
     # via mongopy (pyproject.toml)
