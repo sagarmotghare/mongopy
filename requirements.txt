@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-certifi==2024.2.2
+certifi==2024.6.2
     # via mongopy (pyproject.toml)
 dnspython==2.6.1
     # via pymongo
